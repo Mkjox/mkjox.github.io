@@ -1,17 +1,24 @@
-import { GetStaticProps, GetStaticPaths } from "next";
 import { getAllPosts } from "lib/getPosts";
+import { GetStaticProps, GetStaticPaths } from "next";
 
-export default function BlogPost({ post }) {
+type PostProps = {
+  metadata: {
+    title: string;
+    date: string;
+  };
+  content: string;
+};
+
+export default function BlogPost({ metadata, content }: PostProps) {
   return (
-    <div>
-      <h1>{post.title}</h1>
-      <p>{post.date}</p>
-      <article>{post.content}</article>
-    </div>
+    <article>
+      <h1>{metadata.title}</h1>
+      <p>{metadata.date}</p>
+      <div dangerouslySetInnerHTML={{ __html: content }} />
+    </article>
   );
 }
 
-// Generate paths for all posts
 export const getStaticPaths: GetStaticPaths = async () => {
   const posts = getAllPosts();
   const paths = posts.map((post) => ({
@@ -21,10 +28,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-// Fetch post data
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const posts = getAllPosts();
   const post = posts.find((p) => p.slug === params?.slug);
 
-  return { props: { post } };
+  if (!post) {
+    return { notFound: true };
+  }
+
+  return {
+    props: {
+      metadata: post.metadata,
+      content: post.content,
+    },
+  };
 };

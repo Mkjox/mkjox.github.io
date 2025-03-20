@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "700"], // Optional: Select weights
+  weight: ["400", "700"],
 });
 
 const sourceCodePro = Source_Code_Pro({

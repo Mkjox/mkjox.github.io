@@ -9,12 +9,12 @@ export function getAllPosts() {
 
   return filenames.map((filename) => {
     const filePath = path.join(postsDirectory, filename);
-    const fileContents = fs.readFileSync(filePath, "utf-8");
-    const { data, content } = matter(fileContents);
+    const fileContents = fs.readFileSync(filePath, "utf8");
+    const { data: metadata, content } = matter(fileContents);
 
     return {
-      slug: filename.replace(".mdx", ""),
-      ...data,
+      slug: filename.replace(/\.mdx$/, ""),
+      metadata,
       content,
     };
   });

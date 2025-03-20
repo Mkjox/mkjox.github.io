@@ -1,0 +1,31 @@
+.experience {
+    padding: 4rem 1rem;
+    background-color: #ffffff;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .experience h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .experienceItem {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: left;
+  }
+  
+  .experienceItem h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .experienceItem p {
+    margin: 0.3rem 0;
+    color: #555;
+  }
+  
