@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, Twitter } from "lucide-react"
 import Link from "next/link"
-import ContactForm from "./components/contact-form"
+// import ContactForm from "./components/contact-form"
 import ProjectCard from "./components/project-card"
 import TechStack from "./components/tech-stack"
 
@@ -113,7 +113,7 @@ export default function Page() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
                 Get in Touch
               </h2>
-              <ContactForm />
+              {/* <ContactForm /> */}
             </div>
           </div>
         </section>
