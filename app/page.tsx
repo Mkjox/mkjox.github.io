@@ -73,7 +73,7 @@ export default function Page() {
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">Projects</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <ProjectCard
+              {/* <ProjectCard
                 title="E-commerce Platform"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada efficitur convallis."
                 image="/placeholder.svg?height=400&width=600"
@@ -93,7 +93,7 @@ export default function Page() {
                 image="/placeholder.svg?height=400&width=600"
                 link="https://github.com/mkjox"
                 tags={["OpenAI", "Next.js", "TailwindCSS"]}
-              />
+              /> */}
             </div>
           </div>
         </section>

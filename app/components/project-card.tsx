@@ -15,12 +15,12 @@ export default function ProjectCard({ title, description, image, link, tags }: P
   return (
     <Card className="overflow-hidden">
       <div className="relative aspect-video">
-        <Image
+        {/* <Image
           src={image || "/placeholder.svg"}
           alt={title}
           fill
           className="object-cover transition-transform hover:scale-105"
-        />
+        /> */}
       </div>
       <CardContent className="p-4">
         <h3 className="font-semibold text-xl mb-2">{title}</h3>
