@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import ContactForm from "./components/contact-form";
+import { ModeToggle } from "@/components/mode-toggle";
+import ProjectCard from "./components/project-card";
 
 export default function Home() {
   return (
@@ -76,7 +78,27 @@ export default function Home() {
               Projects
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {/* PROJECTCARD PLACEHOLDER */}
+              <ProjectCard
+                title="Travel App"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada efficitur convallis."
+                // image="/placeholder.svg?height=400&width=600"
+                link="https://github.com/mkjox"
+                tags={["React Native", "PostgreSql", "Axios", "Figma", ".NET Core", "Rest API", "Fluent API", "JWT", "AutoMapper"]}
+              />
+              <ProjectCard
+                title="TrivAI"
+                description="Donec pellentesque urna id elit vulputate, eu accumsan leo commodo."
+                // image="/placeholder.svg?height=400&width=600"
+                link="https://github.com/mkjox"
+                tags={["React", "Shadcn", "Axios", "PostgreSql", "Docker", "TailwindCSS"]}
+              />
+              <ProjectCard
+                title="Habit Tracker"
+                description="Sed venenatis id justo ut vulputate. In facilisis elit leo, id condimentum nunc venenatis eget."
+                // image="/placeholder.svg?height=400&width=600"
+                link="https://github.com/mkjox"
+                tags={["React Native", "Figma", "SQLite", "React Native Paper", "Jest", "Expo"]}
+              />
             </div>
           </div>
         </section>
@@ -117,6 +139,10 @@ export default function Home() {
           </nav>
         </div>
       </footer>
+
+      <div className="fixed bottom-6 right-6 z-50">
+        <ModeToggle />
+      </div>
     </div>
   );
 }
