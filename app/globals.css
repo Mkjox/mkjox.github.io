@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -18,9 +18,9 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
-/* 
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -137,4 +137,4 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-} */
+} 
