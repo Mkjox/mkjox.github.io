@@ -19,15 +19,15 @@ export default function Home() {
               <Link href="#about" className="transition-colors hover:text-foreground/80">
                 About
               </Link>
-              <Link href="#about" className="transition-colors hover:text-foreground/80">
+              <Link href="#projects" className="transition-colors hover:text-foreground/80">
                 Projects
               </Link>
-              <Link href="#about" className="transition-colors hover:text-foreground/80">
+              <Link href="#contact" className="transition-colors hover:text-foreground/80">
                 Contact
               </Link>
             </nav>
           </div>
-          <Button variant="outline" className="ml-auto">
+          <Button variant="outline" className="ml-auto cursor-pointer">
             Resume
           </Button>
         </div>
@@ -48,21 +48,21 @@ export default function Home() {
 
               <div className="space-x-4">
                 <Link href="https://github.com/mkjox" target="_blank">
-                  <Button variant="outline" size="icon">
+                  <Button variant="outline" size="icon" className="cursor-pointer">
                     <Github className="h-4 w-4" />
                     <span className="sr-only">Github</span>
                   </Button>
                 </Link>
 
                 <Link href="https://linkedin.com/in/mert-siliv/" target="_blank">
-                  <Button variant="outline" size="icon">
+                  <Button variant="outline" size="icon" className="cursor-pointer">
                     <Linkedin className="h-4 w-4" />
                     <span className="sr-only">LinkedIn</span>
                   </Button>
                 </Link>
 
                 <Link href="mailto:mert.k.siliv@hotmail.com">
-                  <Button variant="outline" size="icon">
+                  <Button variant="outline" size="icon" className="cursor-pointer">
                     <Mail className="h-4 w-4" />
                     <span className="sr-only">Email</span>
                   </Button>
@@ -79,25 +79,46 @@ export default function Home() {
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <ProjectCard
-                title="Travel App"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada efficitur convallis."
+                title="Pandora Frontend"
+                description="Project built for keeping passwords. Multiple encryptions applied, focused on simplicity and safety."
                 // image="/placeholder.svg?height=400&width=600"
-                link="https://github.com/mkjox"
-                tags={["React Native", "PostgreSql", "Axios", "Figma", ".NET Core", "Rest API", "Fluent API", "JWT", "AutoMapper"]}
+                link="https://github.com/Mkjox/PandoraFrontend"
+                tags={["React Native", "Redux", "PostgreSql", "Axios", "React Native Paper", "Jest", "Expo", "Figma", "TS"]}
               />
               <ProjectCard
-                title="TrivAI"
-                description="Donec pellentesque urna id elit vulputate, eu accumsan leo commodo."
+                title="Travel App Frontend"
+                description="Project built for exploring routes for traveling (hiking, cycling, etc.)."
                 // image="/placeholder.svg?height=400&width=600"
-                link="https://github.com/mkjox"
-                tags={["React", "Shadcn", "Axios", "PostgreSql", "Docker", "TailwindCSS"]}
+                link="https://github.com/Mkjox/TravelAppClient"
+                tags={["React Native", "Axios", "Figma", "Expo", "TS", "JS"]}
+              />
+              <ProjectCard
+                title="Travel App Backend"
+                description="Backend for Travel App Client. Built with .NET Core 8."
+                // image="/placeholder.svg?height=400&width=600"
+                link="https://github.com/Mkjox/TravelAppApi"
+                tags={[".NET Core", "PostgreSql", "Rest API", "Fluent API", "JWT", "AutoMapper", "Unit of Work", "Generic Repository", "EF Core", "C#"]}
+              />
+              <ProjectCard
+                title="TrivAI Frontend"
+                description="Supposed to be a Trivia app powered by AI. Discontinued at the moment, Also private repository."
+                // image="/placeholder.svg?height=400&width=600"
+                link="https://github.com/Mkjox"
+                tags={["React", "Shadcn", "Axios", "PostgreSql", "Docker", "TailwindCSS", "JS"]}
               />
               <ProjectCard
                 title="Habit Tracker"
-                description="Sed venenatis id justo ut vulputate. In facilisis elit leo, id condimentum nunc venenatis eget."
+                description="Project made for tracking habits."
                 // image="/placeholder.svg?height=400&width=600"
-                link="https://github.com/mkjox"
-                tags={["React Native", "Figma", "SQLite", "React Native Paper", "Jest", "Expo"]}
+                link="https://github.com/Mkjox/HabitTracker"
+                tags={["React Native", "SQLite", "React Native Paper", "Expo", "Victory Native", "TS"]}
+              />
+              <ProjectCard
+                title="Hotel Tracker"
+                description="App made to showcase how i do my designs basically. Used mock data in it."
+                // image="/placeholder.svg?height=400&width=600"
+                link="https://github.com/Mkjox/Hotel-App"
+                tags={["React Native", "Figma", "Mock Data", "Axios", "JS"]}
               />
             </div>
           </div>
@@ -116,7 +137,7 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="mx-auto max-w-2xl">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
-                Get in Touch
+                Get in Touch (Doesn&apos;t work right now)
               </h2>
               <ContactForm />
             </div>

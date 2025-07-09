@@ -16,7 +16,7 @@ export function ModeToggle() {
     }
 
     return (
-        <Button onClick={toggleTheme} variant="outline" size="sm">
+        <Button onClick={toggleTheme} variant="outline" size="sm" className="cursor-pointer">
             <Sun className={`h-[1.2rem] w-[1.2rem] transition-all ${isDark ? "scale-0 rotate-90" : "scale-100 rotate-0"}`} />
             <Moon className={`absolute h-[1.2rem] w-[1.2rem] transition-all ${isDark ? "scale-100 rotate-0" : "scale-0 rotate-90"}`} />
             <span className="sr-only">Toggle theme</span>
